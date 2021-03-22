@@ -40,6 +40,11 @@ IMPORTANT: MAKE SURE NO BLOCKS POINT TO ID: 0! Keep ID 0 as an introduction. If 
 
 If you want to change the .json file (e.g. put it in another folder), check main.dart line 52 -> change the path
 If you want to change the title "story" to something else, check main.dart line 54 -> change the title from the brackets to ["yourTitle"]
+Remember: don't delete any fields!
+
+## Add new options
+Add an option in the .json file by writing a new "option#number" field and "next#number".
+Go to main_screen.dart line 70 and copy the previous line. You only have to change the "optionNr" field.
 
 ## Small hiccup
 
