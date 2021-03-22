@@ -1,0 +1,27 @@
+{
+  "story": [
+    {
+      "id": 0,
+      "data": "Hello there",
+      "option1": "go ahead",
+      "option2": "don't go ahead",
+      "next": 1
+    },
+
+    {
+      "id": 1,
+      "data": "general Kenobi",
+      "option1": "none",
+      "option2": "none",
+      "next": 2
+    },
+
+    {
+      "id": 2,
+      "data": "water",
+      "option1": "haha",
+      "option2": "madafaka",
+      "next": 0
+    }
+  ]
+}
