@@ -14,6 +14,7 @@ The template to write a story with 2 choices is written there. All fields can be
 Let's see an example:
 
 {
+
   "story": [ -------------------> Name of the list that contains all blocks. (Basically the whole story)
   
     {
@@ -30,6 +31,7 @@ Let's see an example:
       "next2": 1
     }
   ]
+  
 }
 
 IMPORTANT: MAKE SURE NO BLOCKS POINT TO ID: 0! Keep ID 0 as an introduction. If you have another block point to 0, all the progress will be lost. *NEVER* return to this ID.
