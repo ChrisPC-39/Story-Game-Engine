@@ -24,7 +24,7 @@ Let's see an example:
       
       "option1": "Option 1", ---> The "option1" and "option2" fields contain the text of a button
       
-      "option2": "Option 1", ---> The options can be set to "none", which will cause the next block to show after a 1 second delay (see main_screen.dart line 59)
+      "option2": "Option 2", ---> The options can be set to "none", which will cause the next block to show after a 1 second delay (see main_screen.dart line 59)
       
       "next1": 1, --------------> "next1" and "next2" point to the IDs of the blocks you want the choices to go to. These IDs MUST exist in the .json file!
       
