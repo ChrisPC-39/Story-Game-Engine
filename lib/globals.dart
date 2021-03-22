@@ -12,12 +12,12 @@ class Story {
 
 //This looks at the current story block and returns the next ID is in the whole list
 int findNextIndex(List currChoice, int optionNr) {
-  return story.data[currChoice.elementAt(currChoice.length - 1)["id"]]["next$optionNr"];
+  return story.data[currChoice.elementAt(0)["id"]]["next$optionNr"];
 }
 
 //This looks at the current story block and returns the current ID
 int findCurrIndex(List currChoice) {
-  return story.data[currChoice.elementAt(currChoice.length - 1)["id"]]["id"];
+  return story.data[currChoice.elementAt(0)["id"]]["id"];
 }
 
 bool hasStarted(List blockList) {

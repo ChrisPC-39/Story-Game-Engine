@@ -11,6 +11,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   List blockList = [];
+  ScrollController _scrollController = new ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,10 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget _buildListView() {
     return Flexible(
-        child: ListView.builder(
+      child: ListView.builder(
+        controller: _scrollController,
+        reverse: true,
+        //shrinkWrap: true,
         physics: BouncingScrollPhysics(),
         itemCount: blockList.length,
         itemBuilder: (context, index) {
@@ -59,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
       Future.delayed(const Duration(milliseconds: 1000), () { _updateLists(currIndex); });
       //Update the list with a delay if no options are found.
 
-    return Container();
+    return Container(height: 50);
   }
 
   Widget _buildButtonRow(int currIndex) {
@@ -105,8 +109,10 @@ class _MainScreenState extends State<MainScreen> {
 
   void _updateLists(int currIndex, [int optionNr = 1]) {
     int nextIndex = findNextIndex(blockList, optionNr);
-    setState(() { blockList.add(story.data[nextIndex]); });
+    setState(() { blockList.insert(0, story.data[nextIndex]); }); //blockList.add(story.data[nextIndex]);
     Hive.box('progress').putAt(0, Id(currIndex, blockList));
+
+    //_scrollController.animateTo(0.0, curve: Curves.easeOut, duration: Duration(milliseconds: 300));
   }
 
   TextStyle defaultStyle() {
