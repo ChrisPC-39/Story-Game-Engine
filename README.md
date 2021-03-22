@@ -12,14 +12,21 @@ Navigate to the assets/story.json
 The template to write a story with 2 choices is written there. All fields can be customized, but they CAN'T be deleted. More can be added, but the code doesn't support new fields by default. (You won't get any errors, but they won't show up either).
 
 Let's see an example:
+
 {
   "story": [ -------------------> Name of the list that contains all blocks. (Basically the whole story)
+  
     {
       "id": 0,  ----------------> Id of an individual block. Blocks CAN'T have the same IDs!
+      
       "data": "Welcome!", ------> This is the content of the block. Anything can go here (besides emojis and probably some symbols. Be careful!)
+      
       "option1": "Option 1", ---> The "option1" and "option2" fields contain the text of a button
+      
       "option2": "Option 1", ---> The options can be set to "none", which will cause the next block to show after a 1 second delay (see main_screen.dart line 59)
+      
       "next1": 1, --------------> "next1" and "next2" point to the IDs of the blocks you want the choices to go to. These IDs MUST exist in the .json file!
+      
       "next2": 1
     }
   ]
