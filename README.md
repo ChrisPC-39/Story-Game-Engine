@@ -17,7 +17,7 @@ Let's see an example:
 
   "story": [ -------------------> Name of the list that contains all blocks. (Basically the whole story)
   
-    {
+    { //start of block
       "id": 0,  ----------------> Id of an individual block. Blocks CAN'T have the same IDs!
       
       "data": "Welcome!", ------> This is the content of the block. Anything can go here (besides emojis and probably some symbols. Be careful!)
@@ -29,7 +29,7 @@ Let's see an example:
       "next1": 1, --------------> "next1" and "next2" point to the IDs of the blocks you want the choices to go to. These IDs MUST exist in the .json file!
       
       "next2": 1
-    }
+    } //end of block
   ]
   
 }
