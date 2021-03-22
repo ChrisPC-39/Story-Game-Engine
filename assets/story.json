@@ -2,26 +2,29 @@
   "story": [
     {
       "id": 0,
-      "data": "Hello there",
-      "option1": "go ahead",
-      "option2": "don't go ahead",
-      "next": 1
+      "data": "Story block 0",
+      "option1": "go ahead0",
+      "option2": "go ahead0",
+      "next1": 1,
+      "next2": 1
     },
 
     {
       "id": 1,
-      "data": "general Kenobi",
+      "data": "Story block 1",
       "option1": "none",
       "option2": "none",
-      "next": 2
+      "next1": 2,
+      "next2": 2
     },
 
     {
       "id": 2,
-      "data": "water",
-      "option1": "haha",
-      "option2": "madafaka",
-      "next": 0
+      "data": "Story block 2",
+      "option1": "go ahead2",
+      "option2": "go ahead2",
+      "next1": 1,
+      "next2": 1
     }
   ]
 }

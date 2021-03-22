@@ -1,7 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 Story story = Story();
@@ -13,23 +10,9 @@ class Story {
   List data = [];
 }
 
-TextStyle defaultStyle() {
-  return TextStyle(
-    fontSize: 20,
-    color: ThemeData.dark().primaryColor
-  );
-}
-
-TextStyle defaultButtonStyle() {
-  return TextStyle(
-      fontSize: 20,
-      color: Colors.indigo
-  );
-}
-
 //This looks at the current story block and returns the next ID is in the whole list
-int findNextIndex(List currChoice) {
-  return story.data[currChoice.elementAt(currChoice.length - 1)["id"]]["next"];
+int findNextIndex(List currChoice, int optionNr) {
+  return story.data[currChoice.elementAt(currChoice.length - 1)["id"]]["next$optionNr"];
 }
 
 //This looks at the current story block and returns the current ID
@@ -37,9 +20,6 @@ int findCurrIndex(List currChoice) {
   return story.data[currChoice.elementAt(currChoice.length - 1)["id"]]["id"];
 }
 
-Future<void> readJson() async {
-  final String response = await rootBundle.loadString('assets/story.json');
-  final data = await json.decode(response);
-  story.data = data["story"];
-  //How does this work without setState(() {}); ???????????????????????
+bool hasStarted(List blockList) {
+  return blockList.length == 0 ? false : true;
 }
