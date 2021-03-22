@@ -45,3 +45,7 @@ If you want to change the title "story" to something else, check main.dart line 
 
 Reading the Json file takes some time, which causes the app to show an error screen for a couple of seconds (if you are in debug mode). I don't know how to fix that yet.
 If you are in release mode, this problem will not show up (you will only see a blank screen for a few seconds).
+
+## TODO:
+
+Scroll down when an item is added to the list (currently the user is forced to scroll to see new blocks).
